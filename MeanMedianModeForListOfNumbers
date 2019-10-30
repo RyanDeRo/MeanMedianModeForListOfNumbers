@@ -1,0 +1,23 @@
+numbers = input('Please submit a list of numbers, separated by spaces.')
+numbers = numbers.split() # split the input into a list of string numbers
+numbers = list(map(int, numbers)) # convert the list of strings into a list of intergers
+
+
+
+
+def function_mean(numbers):
+    sum1 = 0
+    sum1 = sum(numbers) # sum of the numbers in the list
+    count1 = len(numbers) # number of numbers provided. 
+    print('There are ' + str(count1) + ' numbers in this list.')
+    numbers_mean = int(sum1 / count1) # average of numbers provided
+    print('The mean of this list is ' + str(numbers_mean))
+    return numbers_mean
+
+
+function_mean(numbers)
+    
+
+#def median(numbers)
+
+#def mode(numbers)
