@@ -1,23 +1,42 @@
+# Get input, split the input into a list of string numbers, sort numbers in ascending order, convert strings in list to ints
 numbers = input('Please submit a list of numbers, separated by spaces.')
-numbers = numbers.split() # split the input into a list of string numbers
-numbers = list(map(int, numbers)) # convert the list of strings into a list of intergers
+numbers = numbers.split()
+numbers = (sorted(numbers))
+numbers = list(map(int, numbers)) 
 
 
 
-
+#Get the sum of the numbers in the list, number of objects in the list
+#set numbers_mean = to a float of the sum of the numbers divided by the number of objects (mean)
 def function_mean(numbers):
     sum1 = 0
-    sum1 = sum(numbers) # sum of the numbers in the list
-    count1 = len(numbers) # number of numbers provided. 
+    sum1 = sum(numbers) 
+    count1 = len(numbers) 
     print('There are ' + str(count1) + ' numbers in this list.')
-    numbers_mean = int(sum1 / count1) # average of numbers provided
+    numbers_mean = float(sum1 / count1) 
     print('The mean of this list is ' + str(numbers_mean))
     return numbers_mean
 
 
 function_mean(numbers)
-    
 
-#def median(numbers)
 
-#def mode(numbers)
+#First get the amount of numbers in the list. Then we determine IF the list has an even or odd number of objects.
+#if odd, numbers_median is set to the middle value in the list(?)
+#if even, numbers_median is set to the average of the sum of the two middle values of the list(?)
+
+def function_median(numbers):
+    numbers_median = 0
+    count2 = len(numbers)
+    if count2 % 2 == 1:  
+        numbers_median = numbers[int(len(numbers)/2)] 
+        print('The median is ' + str(numbers_median) + '.')
+    elif count2 % 2 == 0:
+        numbers_median = ((numbers[int(len(numbers)/2)] + numbers[int((len(numbers)/2)+1)]) / 2) 
+        print('The median is ' + str(numbers_median) + '.')
+    return numbers_median
+
+function_median(numbers)
+
+
+#def function_mode(numbers):
