@@ -38,5 +38,12 @@ def function_median(numbers):
 
 function_median(numbers)
 
+#Get the last element in the list of numbers and print it
 
-#def function_mode(numbers):
+def function_mode(numbers):
+    numbers_mode = numbers[-1]
+    print('The mode is ' + str(numbers_mode) + '.')
+    return numbers_mode
+
+function_mode(numbers)
+
